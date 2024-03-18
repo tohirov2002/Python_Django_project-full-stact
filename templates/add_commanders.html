@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+
+{% block title %}
+   Insert new commander
+{% endblock %}
+
+{% block content %}
+    <div class="d-flex justify-content-center align-items-center flex-column mt-5">
+            <h1 style="color: blue;">Yangi sarkarda qo'shish</h1>
+        <form action="" method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            <fieldset>
+                <p class="d-flex justify-content-center flex-column gap-1 mt-3">
+                    <label class="fs-4 me-2 text-info" for="name">Ismini kiriting:</label>
+                    <input style="box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); border-color: #007bff; border: 1px solid #ccc; border-radius: 5px;padding: 5px 12px;font-size: 16px; transition: border-color 0.3s ease;" type="text" name="name" required> <br>
+                </p>
+                <p class="d-flex justify-content-center flex-column gap-1 mt-3">
+                    <label class="fs-4 me-2 text-info" for="year">Yashagan yilini kiriting:</label>
+                    <input style="box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); border-color: #007bff; border: 1px solid #ccc; border-radius: 5px;padding: 5px 12px;font-size: 16px; transition: border-color 0.3s ease;" type="number" name="year" required> <br>
+                </p>
+                <p class="d-flex justify-content-center flex-column gap-1 mt-3">
+                    <label class="fs-4 me-2 text-info" for="did">Qanaqa siyosat olib borgan:</label>
+                    <input style="box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); border-color: #007bff; border: 1px solid #ccc; border-radius: 5px;padding: 5px 12px;font-size: 16px; transition: border-color 0.3s ease;" type="text" name="did" required> <br>
+                </p>
+                <div style="width: 620px;">
+                    <p class="d-flex flex-column" >
+                    <label class="fs-4 me-2 text-info" for="area">Qancha hududni egallagan:</label>
+                    <input style="box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); border-color: #007bff; border: 1px solid #ccc; border-radius: 5px;padding: 5px 12px;font-size: 16px; transition: border-color 0.3s ease;" type="text" name="area" required> <br>
+                </p>
+                </div>
+                 <p class="d-flex justify-content-center flex-column gap-1 mt-3">
+                    <label class="fs-4 me-2 text-info" for="image">Sarkarda rasmini kiriritng</label>
+                    <input style="box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); border-color: #007bff; border: 1px solid #ccc; border-radius: 5px;padding: 5px 12px;font-size: 16px; transition: border-color 0.3s ease;" type="file" name="image"> <br>
+                </p>
+                <div class="">
+                <button style="width: 600px; padding: 8px;" class="btn btn-success ms-3 gap-1 ">add commander</button>
+                </div>
+            </fieldset>
+        </form>
+    </div>
+{% endblock %}
