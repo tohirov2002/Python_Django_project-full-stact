@@ -18,3 +18,4 @@ class Commander(models.Model):
         db_table = 'commander'
         verbose_name = 'Commander list'
         ordering = ('id',)
+        
